@@ -62,6 +62,9 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         BASE_URL: config.dev.assetsPublicPath + config.dev.assetsSubDirectory,
       },
     }),
+    new webpack.ProvidePlugin({
+      'window.Quill': 'quill'
+    })
   ]
 })
 
@@ -82,7 +85,7 @@ module.exports = new Promise((resolve, reject) => {
           compilationSuccessInfo: {
             messages: [
               `Your application is running here: http://${
-                devWebpackConfig.devServer.host
+              devWebpackConfig.devServer.host
               }:${port}`
             ]
           },

@@ -92,7 +92,7 @@ export const asyncRouterMap = [
     children: [
       {
         path: '/edited',
-        component: () => import('@/views/fruit/edited/EditeFruit'),
+        component: () => import('@/views/fruit/index'),
         name: 'edited',
         meta: {
           title: '修改水果',
@@ -101,7 +101,7 @@ export const asyncRouterMap = [
       },
       {
         path: '/add',
-        component: () => import('@/views/fruit/add/AddFruit'),
+        component: () => import('@/views/fruit/AddFruit'),
         name: 'add',
         meta: {
           title: '新增水果',
